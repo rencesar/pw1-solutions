@@ -1,4 +1,7 @@
 <?php
+	define('SECRET_KEY', getenv('SECRET_KEY'));
+
+
 	switch ($_SERVER["SCRIPT_NAME"]) {
 		case "/index.php":
 			$CURRENT_PAGE = "Home"; 
@@ -16,4 +19,5 @@
 			$CURRENT_PAGE = "not_found";
 			$PAGE_TITLE = "Not Found";
 	}
+
 ?>
