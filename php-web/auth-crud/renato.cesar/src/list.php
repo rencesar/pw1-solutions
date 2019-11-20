@@ -34,7 +34,7 @@ if (!$_SESSION['auth']){
                 <td>".$product['qtd']."</td>
                 <td>".$product['price']."</td>
                 <td>".$product['qtd']*$product['price']."</td>
-                <td><a href='delete.php/?id=".$product['id']."'>Deletar</a> <a href='update.php/?id=".$product['id']."'>Atualizar</a></td>
+                <td><a href='delete.php?id=".$product['id']."'>Deletar</a> <a href='update.php?id=".$product['id']."'>Atualizar</a></td>
             </tr>";
         }
     ?>

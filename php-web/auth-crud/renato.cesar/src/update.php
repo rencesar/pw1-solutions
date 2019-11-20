@@ -16,14 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['produto'] ?? null;
     $qtd = $_POST['qtd'] ?? null;
     $price = $_POST['price'] ?? null;
+    echo $price;
 
     if($name && $qtd) {
-        $product->$name = $name;
-        $product->$qtd = $qtd;
-        $product->$price = $price;
+        $product->name = $name;
+        $product->qtd = $qtd;
+        $product->price = $price;
         $product->save();
-        session_write_close();
-        header('location: list.php');
+        // session_write_close();
+        // header('location: list.php');
     }
 }
 

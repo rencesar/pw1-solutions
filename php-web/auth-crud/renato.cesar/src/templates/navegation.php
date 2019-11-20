@@ -2,7 +2,7 @@
     <h5 class="my-0 mr-md-auto font-weight-normal">Renato's CRUD</h5>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="create.php">Criar</a>
-        <a class="p-2 text-dark" href="#">Listar</a>
+        <a class="p-2 text-dark" href="list.php">Listar</a>
     </nav>
     <?php 
         require_once('utils/auth.php');

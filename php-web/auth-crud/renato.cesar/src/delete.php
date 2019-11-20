@@ -11,6 +11,6 @@ if (!$_SESSION['auth']){
 
 $id = $_GET['id'] ?? null;
 ProductModel::delete($id);
-header('location: ../list.php');
+header('location: list.php');
 
 ?>

@@ -13,25 +13,34 @@ class ProductModel {
         $this->price = $price;
     }
 
-    private function setId($id) {
+    public function setId($id) {
       $this->id = $id;
     }
 
+    public function getId() {
+      return $this->id;
+    }
+
     public function save() {
-        if ($this->id) {
+        if ($this->getId()) {
+          echo 'ALLOU';
           global $dbconnection;
           $qtd = $this->qtd;
           $name = $this->name;
           $price = $this->price;
+          $id = $this->id;
+          echo $qtd;
+          echo $price;
           $sql = "UPDATE product
-                    SET name='${name}',
-                    SET qtd='${qtd}',
-                    SET price='${price}',
+                    SET name='${name}', qtd='${qtd}', price='${price}'
                     WHERE id=${id};";
+          echo $sql;
           try {
             return $dbconnection->exec($sql);
           } catch(PDOExecption $e) { 
-            $dbconnection->rollback(); 
+            $dbconnection->rollback();
+            echo 'ALOU 2 entao man';
+            echo $e->getMessage();
             print "Error!: " . $e->getMessage(); 
           } 
         }
